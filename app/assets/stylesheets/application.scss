@@ -1,0 +1,16 @@
+@import "./reset";
+@import "./variable";
+@import "font-awesome";
+@import "./main";
+@import "./side";
+
+:root {
+  --main-gutter: 20px;
+  --top-padding: padding-top: 35px;
+}
+
+
+.chat {
+	display: flex;
+	height: 100vh;
+}
