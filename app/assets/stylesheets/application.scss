@@ -3,6 +3,8 @@
 @import "font-awesome";
 @import "./main";
 @import "./side";
+@import "modules/user";
+@import "modules/group";
 
 :root {
   --main-gutter: 20px;
