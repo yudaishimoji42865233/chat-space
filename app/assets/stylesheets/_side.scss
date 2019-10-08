@@ -1,0 +1,51 @@
+@import "variable.scss";
+
+.chat__side {
+  a:visited {
+        color: white;
+        text-decoration: none;
+  }
+  a:link {
+        color: white;
+        text-decoration: none;
+  }  
+
+  &__top {
+    box-sizing: border-box;
+    height: 100px;
+    @include side-w;
+  	background-color: #253141;
+    color: white;
+  	font-size: 16px;
+  	font-weight: bold;
+    @include side-p;
+  	padding-top: 35px;
+  	padding-bottom: 20px;
+    display: flex;
+    &__icon {
+      margin-left: auto;
+    }
+  }
+
+  &__glist {
+    background-color: #2f3e51;
+    box-sizing: border-box;
+    height: calc(100vh - 100px);  
+    padding-top: 10px;    
+    color: #FFFFFF;
+    overflow: scroll;
+    @include side-w;
+    @include side-p;
+
+    &__group{
+  	  &__name {
+        font-size: 15px;
+        padding-top: 20px;
+  	  }
+  	  &__message {
+        font-size: 11px;
+        padding-bottom: 20px;
+  	  }
+    }  
+  }
+}
