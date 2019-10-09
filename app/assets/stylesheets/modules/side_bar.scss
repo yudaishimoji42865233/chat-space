@@ -9,7 +9,7 @@
     padding: 0 20px;
     &__name {
       display: inline-block;
-      font-size: $side_header_font;
+      font-size: 16px;
       font-weight: bold;
     }
     &__lists {
@@ -20,7 +20,6 @@
       }
       .icon {
         color: $white;
-        font-size: $side_header_font;
       }
     }
   }
@@ -34,11 +33,11 @@
       padding: 20px 0 40px;
       &__name {
         color: $white;
-        font-size: $side_group_name;
+        font-size: 15px;
       }
       &__message {
         color: $white;
-        font-size: $side_group_message;
+        font-size: 11px;
         margin-top: 5px;
       }
     }

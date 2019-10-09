@@ -7,8 +7,8 @@
 @import "config/colors";
 @import "modules/flash";
 @import "modules/group";
-// @import "modules/chat";
-// @import "modules/side_bar";
+@import "modules/chat";
+@import "modules/side_bar";
 
 :root {
   --main-gutter: 20px;

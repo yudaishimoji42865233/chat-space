@@ -1,10 +1,11 @@
-.chat
-  .chat__side
-    = render partial: "chat_side_top"
-    = render partial: "chat_side_glist"
-  .chat__main
-    .chat__main__border
-    = render partial: "chat_main_header"
-    .main__message
-      = render partial: "chat_main_message"
-      = render partial: "chat_main_footer"
+.messages
+      = render @messages
+
+.form
+  = form_for [@group, @message] do |f|
+    = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+    .form__mask
+      = f.label :image, class: 'form__mask__image' do
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'hidden'
+    = f.submit 'Send', class: 'form__submit'
