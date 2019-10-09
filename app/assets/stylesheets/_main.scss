@@ -87,34 +87,46 @@
 }
 
 .main__footer {
-  background-color: #f5f5f5;
-  box-sizing: border-box;
-  height: 90px;
-  padding-top: 20px;
-  padding-left: 10px;
-  display: flex;
-  position: absolute;
+  background-color: gray;
   bottom: 0;
-  &__text {
-    color: $text-color;
-    width: 800px;
-
+  position: relative;
+  position: fixed;
+  width: 1060px;
+  float: right;
+  height: 90px;
+  padding: 20px 40px;
+  right: 0px;
+  &__box {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    left: 40px;
+    position: absolute;
   }
-  &__form__mask{
-  
-  }
-  
-  &__send-button {
-      background-color: $button-color;
-      color: white;
-      height: 50px;
-      @include side-p;
-      text-align: center;
-      line-height: 50px;
-      margin-left: 60px;
-
+    &__text {
+      color: $text-color;
+      padding: 0 40px 0 10px;
+      border-style: none;
+    }
+    // &__image {
+      // font-size: 1.3rem;
+      // top: 10px;
+      // right: 10px;
+      // float: right;
+      // position: fixed
+    // }
+  &__button {
+    background-color: $button-color;
+    color: white;
+    height: 50px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: auto;
+    padding: 0 30px;
+    position: absolute;
+    right: 40px;
   }
 }
+
 
 .icon {
 padding-top: 20px;
