@@ -1,16 +1,16 @@
 @import "./reset";
 @import "./variable";
 @import "font-awesome";
-// @import "./main";
-@import "./side";
 @import "modules/user";
 @import "config/colors";
 @import "modules/flash";
 @import "modules/group";
 @import "modules/chat";
 @import "modules/side_bar";
+@import "messages/messages.scss";
+@import "messages/vendor_prefix.scss";
 
-:root {
+.root {
   --main-gutter: 20px;
   --top-padding: padding-top: 35px;
 }

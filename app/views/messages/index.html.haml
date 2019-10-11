@@ -1,11 +1,31 @@
-.messages
-  = render @messages
+.wrapper
+  = render 'shared/side_bar'
 
-.main__footer
-  = form_for [@group, @message] do |f|
-    = f.text_field :content, class: 'main__footer__text', placeholder: 'type a message'
-    .main__footer__form__mask
-      = f.label :image, class: 'form__mask__image' do
-        = fa_icon 'picture-o', class: 'icon'
-        .hidden
-    = f.submit 'Send', class: 'main__footer__send-button'
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
+          Member：
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        .right-header__button
+          Edit
+
+    .messages
+      = render @messages
+  
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            .hidden
+        = f.submit 'Send', class: 'form__submit'
