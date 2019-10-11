@@ -1,5 +1,4 @@
-@import "./reset";
-@import "./variable";
+@import "config/reset";
 @import "font-awesome";
 @import "modules/user";
 @import "config/colors";
@@ -7,16 +6,5 @@
 @import "modules/group";
 @import "modules/chat";
 @import "modules/side_bar";
-@import "messages/messages.scss";
-@import "messages/vendor_prefix.scss";
-
-.root {
-  --main-gutter: 20px;
-  --top-padding: padding-top: 35px;
-}
-
-
-.chat {
-	display: flex;
-	height: 100vh;
-}
+@import "messages/messages";
+@import "messages/vendor_prefix";
