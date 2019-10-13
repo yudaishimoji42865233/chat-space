@@ -28,5 +28,7 @@ class MessagesController < ApplicationController
 
   def set_group
     @group = Group.find(params[:group_id])
+    @members = @group.users
+    Time.zone ='Tokyo'
   end
 end

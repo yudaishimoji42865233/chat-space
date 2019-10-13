@@ -57,9 +57,9 @@ $('#new_message').on('submit', function(e){
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
     $('form')[0].reset();
   })
-   .fail(function(){
-     alert('自動更新に失敗しました');
-   });
+  .fail(function(){
+    alert('メッセージを入力してください');
+  });
    return false;
  });
 });
