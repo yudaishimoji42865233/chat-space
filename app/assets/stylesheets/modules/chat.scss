@@ -6,6 +6,7 @@
     box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
+    overflow: hidden;
     .left-header {
       float: left;
       &__title {
@@ -42,8 +43,9 @@
   .messages {
     background-color: #FAFAFA;
     box-sizing: border-box;
-    padding: 46px 40px 0;
-    height: calc(100% - 100px - 90px);
+    padding: 46px 40px;
+    height: calc(100vh - 190px);
+    overflow: auto;
     .message {
       .upper-message {
         display: flex;
