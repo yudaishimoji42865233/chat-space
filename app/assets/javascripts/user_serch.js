@@ -25,9 +25,8 @@ $(function() {
   }
 
   function judgeSearchUserResult(users) {
-    let user_apended_flag = false;
-    let menber_names = $('.chat-group-user__name').map(function(index, elem){return $(elem).text();}).get();
-  
+    var user_apended_flag = false;
+    var menber_names = $('.chat-group-user__name').map(function(index, elem){return $(elem).text();}).get();
     users.forEach(function(user) {
       if ($.inArray(user.user_name, menber_names) < 0) {
         appendSearchUserResult(user);
@@ -65,7 +64,6 @@ $(function() {
         $(this).parent().remove();
         appendUserToMemberList(name, id);
       });
-      
       $(document).on("click", ".user-search-remove", function() {
         $(this).parent().remove();
       });
