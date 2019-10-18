@@ -15,7 +15,7 @@ set :rbenv_ruby, '2.5.1' #カリキュラム通りに進めた場合、2.5.1か2
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/ .ssh/chat-space.pem']
+                  keys: ['~/.ssh/chat-space.pem']
 
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
@@ -65,3 +65,10 @@ end
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+set :default_env, {
+  rbenv_root: "/usr/local/rbenv",
+  path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
+  AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
+  AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
+}
