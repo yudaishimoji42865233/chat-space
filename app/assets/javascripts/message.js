@@ -8,7 +8,7 @@ $(document).on('turbolinks:load', function(){
                       ${message.user_name}
                     </p>
                     <p class="upper-message__date">
-                      ${message.date}
+                      ${message.created_at}
                     </p>
                   </div>
                   <div class="lower-meesage">
@@ -36,6 +36,8 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
+      $('#new_message')[0].reset();
+      $(".form__submit").prop("disabled", false);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
       $('form')[0].reset();
     })
