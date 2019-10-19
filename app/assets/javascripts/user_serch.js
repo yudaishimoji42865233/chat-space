@@ -17,7 +17,7 @@ $(function() {
     $("#chat-group-users").append(html);
   }
 
-  function noneSearchUserResult(user) {
+  function noneSearchUserResult() {
     var html = `<div class="chat-group-user">
                   該当ユーザーなし
                 </div>`
